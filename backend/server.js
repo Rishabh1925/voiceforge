@@ -26,12 +26,28 @@ const allowedOrigins = [
   'https://voiceforge1.vercel.app'        // Your backend URL (for testing)
 ];
 
+// app.use(cors({
+//   origin: function(origin, callback) {
+//     // Allow requests with no origin (mobile apps, Postman, etc.)
+//     if (!origin) return callback(null, true);
+    
+//     if (allowedOrigins.indexOf(origin) !== -1 || process.env.NODE_ENV !== 'production') {
+//       callback(null, true);
+//     } else {
+//       console.log('CORS blocked origin:', origin);
+//       callback(new Error('Not allowed by CORS'));
+//     }
+//   },
+//   credentials: true
+// }));
+
 app.use(cors({
   origin: function(origin, callback) {
-    // Allow requests with no origin (mobile apps, Postman, etc.)
+    // Allow no origin (Postman, etc.)
     if (!origin) return callback(null, true);
     
-    if (allowedOrigins.indexOf(origin) !== -1 || process.env.NODE_ENV !== 'production') {
+    // Allow all vercel.app domains
+    if (origin.endsWith('.vercel.app') || process.env.NODE_ENV !== 'production') {
       callback(null, true);
     } else {
       console.log('CORS blocked origin:', origin);
