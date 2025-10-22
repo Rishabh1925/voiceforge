@@ -90,7 +90,7 @@ git --version
 1. **Create environment file:**
    ```bash
    cd ../backend
-   cp .env.example .env
+   cp .envbackend .env
    ```
 
 2. **Get your API keys:**
