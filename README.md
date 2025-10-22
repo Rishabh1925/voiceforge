@@ -433,7 +433,7 @@ This project is licensed under the **MIT License** - see the LICENSE file for de
 
 ---
 
-<div align="center">
+<div align="left">
 
 **Built by Rishabh Ranjan Singh**
 
