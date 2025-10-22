@@ -22,7 +22,8 @@ const allowedOrigins = [
   'http://localhost:3000',
   'http://localhost:5173',
   'http://localhost:5000',
-  process.env.FRONTEND_URL || 'https://your-frontend.vercel.app'
+  'https://voiceforge1-zct2.vercel.app',  // Your actual frontend URL
+  'https://voiceforge1.vercel.app'        // Your backend URL (for testing)
 ];
 
 app.use(cors({
@@ -33,6 +34,7 @@ app.use(cors({
     if (allowedOrigins.indexOf(origin) !== -1 || process.env.NODE_ENV !== 'production') {
       callback(null, true);
     } else {
+      console.log('CORS blocked origin:', origin);
       callback(new Error('Not allowed by CORS'));
     }
   },
