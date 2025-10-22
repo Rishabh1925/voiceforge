@@ -3,7 +3,10 @@ import axios from 'axios';
 import { Phone, Volume2, Loader2, CheckCircle, XCircle } from 'lucide-react';
 import './App.css';
 
-const API_BASE_URL = 'http://localhost:5000/api';
+// Updated to support both local and production
+const API_BASE_URL = import.meta.env.PROD 
+  ? 'https://voiceforge1.vercel.app/api'  // Production backend
+  : 'http://localhost:5000/api';  // Local development
 
 function App() {
   const [text, setText] = useState('');
@@ -56,7 +59,11 @@ function App() {
         setAudioKey(k => k + 1);
         
         setTimeout(() => {
-          setAudioUrl(`http://localhost:5000${response.data.audioUrl}`);
+          // Updated to use dynamic base URL
+          const baseUrl = import.meta.env.PROD 
+            ? 'https://voiceforge1.vercel.app' 
+            : 'http://localhost:5000';
+          setAudioUrl(`${baseUrl}${response.data.audioUrl}`);
         }, 50);
         
         setMessage('Speech generated successfully! You can now make a call.');
