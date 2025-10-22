@@ -11,7 +11,7 @@
 Powered by ElevenLabs AI • Built for Scale • Developer-Friendly
 
 [![Live Platform](https://img.shields.io/badge/Live%20Platform-Try%20Now-success?style=for-the-badge)](https://voiceforge-ai.vercel.app)
-[![Demo Video](https://img.shields.io/badge/Demo%Video-Visit%20Now-success?style=for-the-badge)](https://your-demo-url.com)
+[![Demo Video](https://img.shields.io/badge/Demo%20Video-Watch%20Now-0A66C2?style=for-the-badge&logo=linkedin)](YOUR_LINKEDIN_POST_LINK_HERE)
 [![Report Bug](https://img.shields.io/badge/Report-Bug-red?style=for-the-badge)](https://github.com/Rishabh1925/voiceforge/issues)
 
 </div>
