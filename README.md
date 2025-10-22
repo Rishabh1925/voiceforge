@@ -1,8 +1,7 @@
 # VoiceForge
 
-<div align="center">
+<div align="left">
 
-![VoiceForge](https://img.shields.io/badge/VoiceForge-AI%20Voice%20Platform-blue?style=for-the-badge)
 ![React](https://img.shields.io/badge/React-18+-61DAFB?style=for-the-badge&logo=react&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-18+-339933?style=for-the-badge&logo=node.js&logoColor=white)
 ![ElevenLabs](https://img.shields.io/badge/ElevenLabs-AI%20Voices-FF6B6B?style=for-the-badge)
@@ -11,22 +10,53 @@
 
 Powered by ElevenLabs AI • Built for Scale • Developer-Friendly
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Now-success?style=for-the-badge)](https://your-demo-url.com)
-[![Documentation](https://img.shields.io/badge/Docs-Read%20Now-blue?style=for-the-badge)](#documentation)
+[![Live Platform](https://img.shields.io/badge/Live%20Platform-Try%20Now-success?style=for-the-badge)](https://voiceforge-ai.vercel.app)
+[![Demo Video](https://img.shields.io/badge/Demo%Video-Visit%20Now-success?style=for-the-badge)](https://your-demo-url.com)
 [![Report Bug](https://img.shields.io/badge/Report-Bug-red?style=for-the-badge)](https://github.com/Rishabh1925/voiceforge/issues)
-[![Request Feature](https://img.shields.io/badge/Request-Feature-green?style=for-the-badge)](https://github.com/Rishabh1925/voiceforge/issues)
 
 </div>
 
-## Quick Start - Local Installation
+---
+
+## Getting Started
+
+You have two options to use VoiceForge:
+
+### Option 1: Use the Hosted Platform (Recommended for Quick Start)
+
+Access the fully deployed application instantly - no setup required.
+
+**Visit:** [https://voiceforge-ai.vercel.app](https://voiceforge-ai.vercel.app)
+
+Perfect for:
+- Testing the platform immediately
+- Evaluating features before local setup
+- Using the service without technical configuration
+- Quick demonstrations and prototypes
+
+### Option 2: Run Locally on Your Machine
+
+Set up VoiceForge on your own computer for development, customization, or self-hosting.
+
+**Best for:**
+- Developers wanting to modify or extend the platform
+- Organizations requiring self-hosted solutions
+- Learning how the system works under the hood
+- Contributing to the project
+
+Continue reading below for complete local installation instructions.
+
+---
+
+## Local Installation Guide
 
 ### Prerequisites
 
-Before you begin, ensure you have the following installed on your computer:
+Before you begin, ensure you have the following installed:
 
-- **Node.js** (version 18.0 or higher) - Download here
+- **Node.js** (version 18.0 or higher) - [Download here](https://nodejs.org/)
 - **npm** (comes with Node.js) or **yarn** package manager
-- **Git** - Download here
+- **Git** - [Download here](https://git-scm.com/)
 
 Verify your installations:
 ```bash
@@ -37,7 +67,7 @@ git --version
 
 ### Step 1: Clone and Setup
 
-1. **Clone the repository to your local machine:**
+1. **Clone the repository:**
    ```bash
    git clone https://github.com/Rishabh1925/voiceforge.git
    cd voiceforge
@@ -65,13 +95,13 @@ git --version
 
 2. **Get your API keys:**
    - **ElevenLabs API Key**: 
-     - Go to ElevenLabs
+     - Go to [ElevenLabs](https://elevenlabs.io)
      - Sign up for a free account
      - Navigate to Settings > API Keys
      - Copy your API key
    
    - **Exotel API (Optional for phone calls):**
-     - Visit Exotel Developer Portal
+     - Visit [Exotel Developer Portal](https://developer.exotel.com)
      - Sign up and get your credentials
 
 3. **Configure your `.env` file:**
@@ -90,7 +120,7 @@ git --version
 
 ### Step 3: Run the Application
 
-**Option 1: Start servers separately (Recommended)**
+**Start both servers:**
 
 Open two terminal windows:
 
@@ -106,18 +136,13 @@ cd frontend
 npm start
 ```
 
-**Option 2: Single command (if available)**
-```bash
-npm run dev
-```
-
-### Step 4: Access Your Application
+### Step 4: Access Your Local Application
 
 Once both servers are running:
 
-- **Frontend Application**: Open http://localhost:3000 in your browser
-- **Backend API**: Running on http://localhost:5000
-- **API Health Check**: Visit http://localhost:5000/health
+- **Frontend Application**: Open [http://localhost:3000](http://localhost:3000) in your browser
+- **Backend API**: Running on [http://localhost:5000](http://localhost:5000)
+- **API Health Check**: Visit [http://localhost:5000/health](http://localhost:5000/health)
 
 ### Troubleshooting Local Setup
 
@@ -150,15 +175,17 @@ Once both servers are running:
    sudo npm install -g npm@latest
    ```
 
+---
+
 ## What Makes This Special?
 
-This is a complete voice communication platform that integrates powerful AI services to:
+VoiceForge is a complete voice communication platform that integrates powerful AI services to deliver:
 
 - Convert text to human-like speech using ElevenLabs' cutting-edge AI
 - Make automated phone calls with custom voice messages
 - Provide multiple voice personalities for different use cases
 - Scale effortlessly with professional-grade API integrations
-- Ready for production with proper error handling and security
+- Production-ready with proper error handling and security
 
 ## Key Features
 
@@ -363,19 +390,19 @@ We love contributions! Here's how you can help make this project even better:
 
 ### Areas We'd Love Help With
 
-- UI/UX improvements - Make it even more beautiful
-- New voice providers - Integrate more TTS services  
-- Analytics dashboard - Usage insights and metrics
-- Internationalization - Multi-language support
-- Testing - More comprehensive test coverage
-- Documentation - Better examples and tutorials
+- UI/UX improvements and design enhancements
+- New voice providers and TTS service integrations  
+- Analytics dashboard for usage insights and metrics
+- Internationalization and multi-language support
+- Testing coverage and comprehensive test suites
+- Documentation improvements with better examples and tutorials
 
 ## Community & Support
 
 ### Need Help?
 
 - **Check the Documentation** - Comprehensive guides and tutorials
-- **Report Issues** - Bug reports and feature requests
+- **Report Issues** - [Bug reports and feature requests](https://github.com/Rishabh1925/voiceforge/issues)
 - **Join Discussions** - Community Q&A
 
 ## License & Legal
