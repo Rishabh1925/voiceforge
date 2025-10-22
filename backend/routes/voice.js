@@ -29,7 +29,6 @@ router.get('/voices', async (_, res) => {
   }
 });
 
-
 router.post('/generate', async (req, res) => {
   try {
     const key = process.env.ELEVENLABS_API_KEY;
@@ -56,9 +55,16 @@ router.post('/generate', async (req, res) => {
     );
 
     const fileName = `speech_${Date.now()}.mp3`;
-    const filePath = path.join(__dirname, '..', 'uploads', fileName);
+    
+    // FIXED: Use /tmp in production (Vercel), uploads locally
+    const uploadsDir = process.env.NODE_ENV === 'production' 
+      ? '/tmp' 
+      : path.join(__dirname, '..', 'uploads');
+    
+    const filePath = path.join(uploadsDir, fileName);
 
-    await fs.ensureDir(path.dirname(filePath));
+    // Ensure directory exists
+    await fs.ensureDir(uploadsDir);
     await fs.writeFile(filePath, data);
 
     res.json({

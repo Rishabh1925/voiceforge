@@ -44,9 +44,12 @@ app.use(cors({
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Serve static files (for audio files)
-// Note: On Vercel, use external storage instead of local uploads
-app.use('/audio', express.static(path.join(__dirname, 'uploads')));
+// FIXED: Serve audio from /tmp in production, uploads locally
+const audioPath = process.env.NODE_ENV === 'production' 
+  ? '/tmp' 
+  : path.join(__dirname, 'uploads');
+
+app.use('/audio', express.static(audioPath));
 
 // Routes
 app.use('/api/voice', voiceRoutes);
