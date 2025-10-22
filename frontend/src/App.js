@@ -5,8 +5,8 @@ import './App.css';
 
 // FIXED: Using process.env for Create React App (not import.meta.env)
 const API_BASE_URL = process.env.NODE_ENV === 'production'
-  ? 'https://voiceforge1.vercel.app/api'  // Production backend
-  : 'http://localhost:5000/api';  // Local development
+  ? 'https://voiceforge1.vercel.app/api'
+  : 'http://localhost:5000/api';
 
 function App() {
   const [text, setText] = useState('');
@@ -59,11 +59,11 @@ function App() {
         setAudioKey(k => k + 1);
         
         setTimeout(() => {
-          // FIXED: Using process.env for Create React App
-          const baseUrl = process.env.NODE_ENV === 'production'
-            ? 'https://voiceforge1.vercel.app'
-            : 'http://localhost:5000';
-          setAudioUrl(`${baseUrl}${response.data.audioUrl}`);
+        // MUST use process.env for Create React App
+        const baseUrl = process.env.NODE_ENV === 'production'
+          ? 'https://voiceforge1.vercel.app'
+          : 'http://localhost:5000';
+        setAudioUrl(`${baseUrl}${response.data.audioUrl}`);
         }, 50);
         
         setMessage('Speech generated successfully! You can now make a call.');
