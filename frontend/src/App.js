@@ -113,7 +113,7 @@ function App() {
   return (
     <div className="App">
       <header className="app-header">
-        <h1>Voice-over AI Agent</h1>
+        <h1>VoiceForge</h1>
         <p>Convert text to speech and make phone calls</p>
       </header>
 

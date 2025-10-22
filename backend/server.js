@@ -15,13 +15,35 @@ const PORT = process.env.PORT || 5000;
 
 // Debug: Check if env is loaded
 console.log('Server.js - API Key loaded:', !!process.env.ELEVENLABS_API_KEY);
+console.log('Server.js - Environment:', process.env.NODE_ENV);
 
-// Middleware
-app.use(cors());
+// CORS configuration - Allow both local and production URLs
+const allowedOrigins = [
+  'http://localhost:3000',
+  'http://localhost:5173',
+  'http://localhost:5000',
+  process.env.FRONTEND_URL || 'https://your-frontend.vercel.app'
+];
+
+app.use(cors({
+  origin: function(origin, callback) {
+    // Allow requests with no origin (mobile apps, Postman, etc.)
+    if (!origin) return callback(null, true);
+    
+    if (allowedOrigins.indexOf(origin) !== -1 || process.env.NODE_ENV !== 'production') {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  credentials: true
+}));
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Serve static files (for audio files)
+// Note: On Vercel, use external storage instead of local uploads
 app.use('/audio', express.static(path.join(__dirname, 'uploads')));
 
 // Routes
@@ -29,11 +51,35 @@ app.use('/api/voice', voiceRoutes);
 app.use('/api/call', callRoutes);
 
 // Health check route
-app.get('/health', (req, res) => {
+app.get('/api/health', (req, res) => {
   res.json({ 
     status: 'Server is running!', 
     timestamp: new Date().toISOString(),
-    envLoaded: !!process.env.ELEVENLABS_API_KEY
+    envLoaded: !!process.env.ELEVENLABS_API_KEY,
+    environment: process.env.NODE_ENV || 'development'
+  });
+});
+
+// Root route
+app.get('/', (req, res) => {
+  res.json({
+    message: 'VoiceForge API',
+    version: '1.0.0',
+    status: 'operational',
+    endpoints: {
+      health: '/api/health',
+      voice: '/api/voice',
+      call: '/api/call'
+    }
+  });
+});
+
+// 404 handler
+app.use((req, res) => {
+  res.status(404).json({
+    error: 'Not Found',
+    message: 'The requested endpoint does not exist',
+    path: req.path
   });
 });
 
@@ -42,16 +88,21 @@ app.use((error, req, res, next) => {
   console.error('Error:', error);
   res.status(500).json({ 
     error: 'Internal server error',
-    message: error.message 
+    message: process.env.NODE_ENV === 'production' ? 'An error occurred' : error.message 
   });
 });
 
-// Start server
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
-  
-  // Ensure uploads directory exists
-  fs.ensureDirSync(path.join(__dirname, 'uploads'));
-});
+// Local development server
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(PORT, () => {
+    console.log(`🚀 Server running on http://localhost:${PORT}`);
+    console.log(`📍 API Health: http://localhost:${PORT}/api/health`);
+    console.log(`📍 API Docs: http://localhost:${PORT}/`);
+    
+    // Ensure uploads directory exists (only for local dev)
+    fs.ensureDirSync(path.join(__dirname, 'uploads'));
+  });
+}
 
+// Export for Vercel serverless functions
 module.exports = app;

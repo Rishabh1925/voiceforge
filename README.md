@@ -1,416 +1,418 @@
-
-```markdown
-# Voice-over AI Agent
+# VoiceForge
 
 <div align="center">
 
-![Voice AI Agent](https://img.shields.io/badge/Voice-AI%20Agent-blue?style=for-the-badge&logo=microphone)
-![React](https://img.shields.io/badge/React-18.0-61DAFB?style=for-the-badge&logo=react)
-![Node.js](https://img.shields.io/badge/Node.js-Express-339933?style=for-the-badge&logo=node.js)
-![ElevenLabs](https://img.shields.io/badge/ElevenLabs-TTS-orange?style=for-the-badge)
+![VoiceForge](https://img.shields.io/badge/VoiceForge-AI%20Voice%20Platform-blue?style=for-the-badge)
+![React](https://img.shields.io/badge/React-18+-61DAFB?style=for-the-badge&logo=react&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-18+-339933?style=for-the-badge&logo=node.js&logoColor=white)
+![ElevenLabs](https://img.shields.io/badge/ElevenLabs-AI%20Voices-FF6B6B?style=for-the-badge)
 
-**A sophisticated web application that converts text to natural-sounding speech and makes phone calls using AI voice synthesis.**
+**AI-powered voice automation platform for text-to-speech and automated calling**
 
-[Live Demo](#) • [Documentation](#) • [Report Bug](https://github.com/Rishabh1925/voice-ai-agent/issues) • [Request Feature](https://github.com/Rishabh1925/voice-ai-agent/issues)
+Powered by ElevenLabs AI • Built for Scale • Developer-Friendly
+
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Now-success?style=for-the-badge)](https://your-demo-url.com)
+[![Documentation](https://img.shields.io/badge/Docs-Read%20Now-blue?style=for-the-badge)](#documentation)
+[![Report Bug](https://img.shields.io/badge/Report-Bug-red?style=for-the-badge)](https://github.com/Rishabh1925/voiceforge/issues)
+[![Request Feature](https://img.shields.io/badge/Request-Feature-green?style=for-the-badge)](https://github.com/Rishabh1925/voiceforge/issues)
 
 </div>
 
----
-
-## Table of Contents
-
-- [About The Project](#about-the-project)
-- [Features](#features)
-- [Built With](#built-with)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-  - [Configuration](#configuration)
-- [Usage](#usage)
-- [API Reference](#api-reference)
-- [Project Structure](#project-structure)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
-- [Acknowledgments](#acknowledgments)
-
----
-
-## About The Project
-
-Voice-over AI Agent is a cutting-edge web application that bridges the gap between text and voice communication. Built with modern web technologies, it leverages ElevenLabs' advanced AI voice synthesis to transform written content into natural-sounding speech and enables automated phone calls through Exotel's telephony platform.
-
-### Why This Project?
-
-- **Accessibility**: Makes content accessible through voice for visually impaired users
-- **Automation**: Automates voice-based communication workflows
-- **Customization**: Multiple voice options for different use cases
-- **Business Ready**: Professional-grade APIs with proper error handling
-- **Developer Friendly**: Clean code structure with comprehensive documentation
-
----
-
-## Features
-
-### Text-to-Speech Conversion
-- Multiple AI-generated voices from ElevenLabs
-- High-quality audio output (MP3 format)
-- Real-time speech generation
-- Voice preview and selection
-
-### Phone Call Integration
-- Automated phone calls with custom audio
-- Exotel API integration
-- Call status tracking
-- Simulation mode for testing
-
-### User Experience
-- Clean, responsive web interface
-- Real-time feedback and loading states
-- Error handling with user-friendly messages
-- Character count and input validation
-
-### Security & Performance
-- Secure API key management
-- Environment-based configuration
-- Audio file caching and cleanup
-- Rate limiting ready
-
----
-
-## Built With
-
-### Frontend
-- [![React](https://img.shields.io/badge/React-18.0-61DAFB?style=flat&logo=react)](https://reactjs.org/)
-- [![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=flat&logo=javascript)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-- [![CSS3](https://img.shields.io/badge/CSS3-Styling-1572B6?style=flat&logo=css3)](https://developer.mozilla.org/en-US/docs/Web/CSS)
-- [![Axios](https://img.shields.io/badge/Axios-HTTP%20Client-5A29E4?style=flat)](https://axios-http.com/)
-- [![Lucide React](https://img.shields.io/badge/Lucide-Icons-FF6B6B?style=flat)](https://lucide.dev/)
-
-### Backend
-- [![Node.js](https://img.shields.io/badge/Node.js-18+-339933?style=flat&logo=node.js)](https://nodejs.org/)
-- [![Express.js](https://img.shields.io/badge/Express.js-4.18-000000?style=flat&logo=express)](https://expressjs.com/)
-- [![ElevenLabs](https://img.shields.io/badge/ElevenLabs-TTS%20API-orange?style=flat)](https://elevenlabs.io/)
-- [![Exotel](https://img.shields.io/badge/Exotel-Telephony%20API-blue?style=flat)](https://exotel.com/)
-
-### Tools & Utilities
-- [![Nodemon](https://img.shields.io/badge/Nodemon-Development-76D04B?style=flat)](https://nodemon.io/)
-- [![CORS](https://img.shields.io/badge/CORS-Middleware-FF6B6B?style=flat)](https://github.com/expressjs/cors)
-- [![dotenv](https://img.shields.io/badge/dotenv-Config-ECD53F?style=flat)](https://github.com/motdotla/dotenv)
-
----
-
-## Getting Started
+## Quick Start - Local Installation
 
 ### Prerequisites
 
-Before you begin, ensure you have the following installed:
+Before you begin, ensure you have the following installed on your computer:
 
-- **Node.js** (v18.0 or higher)
-  ```
-  node --version
-  ```
-- **npm** (v8.0 or higher)
-  ```
-  npm --version
-  ```
+- **Node.js** (version 18.0 or higher) - Download here
+- **npm** (comes with Node.js) or **yarn** package manager
+- **Git** - Download here
 
-### Installation
+Verify your installations:
+```bash
+node --version
+npm --version
+git --version
+```
 
-1. **Clone the repository**
+### Step 1: Clone and Setup
+
+1. **Clone the repository to your local machine:**
+   ```bash
+   git clone https://github.com/Rishabh1925/voiceforge.git
+   cd voiceforge
    ```
-   git clone https://github.com/Rishabh1925/voice-ai-agent.git
-   cd voice-ai-agent
-   ```
 
-2. **Install backend dependencies**
-   ```
+2. **Install backend dependencies:**
+   ```bash
    cd backend
    npm install
    ```
 
-3. **Install frontend dependencies**
-   ```
+3. **Install frontend dependencies:**
+   ```bash
    cd ../frontend
    npm install
    ```
 
-### Configuration
+### Step 2: Environment Configuration
 
-1. **Create environment file**
-   ```
+1. **Create environment file:**
+   ```bash
    cd ../backend
    cp .env.example .env
    ```
 
-2. **Configure your API keys** in `backend/.env`:
-   ```
+2. **Get your API keys:**
+   - **ElevenLabs API Key**: 
+     - Go to ElevenLabs
+     - Sign up for a free account
+     - Navigate to Settings > API Keys
+     - Copy your API key
+   
+   - **Exotel API (Optional for phone calls):**
+     - Visit Exotel Developer Portal
+     - Sign up and get your credentials
+
+3. **Configure your `.env` file:**
+   Open `backend/.env` in a text editor and add:
+   ```env
    PORT=5000
    
-   # ElevenLabs Configuration
+   # Required: ElevenLabs Configuration
    ELEVENLABS_API_KEY=sk_your_elevenlabs_api_key_here
    
-   # Exotel Configuration (Optional for phone calls)
+   # Optional: Exotel Configuration (for phone calls)
    EXOTEL_ACCOUNT_SID=your_exotel_account_sid
    EXOTEL_API_TOKEN=your_exotel_api_token
    EXOTEL_PHONE_NUMBER=your_exotel_phone_number
    ```
 
-3. **Get your API keys**:
-   - **ElevenLabs**: [Get API Key](https://elevenlabs.io/app/settings/api-keys)
-   - **Exotel**: [Developer Portal](https://developer.exotel.com/)
+### Step 3: Run the Application
 
-4. **Start the development servers**
+**Option 1: Start servers separately (Recommended)**
 
-   **Option 1: Start both servers separately**
+Open two terminal windows:
+
+Terminal 1 - Backend:
+```bash
+cd backend
+npm run dev
+```
+
+Terminal 2 - Frontend:
+```bash
+cd frontend
+npm start
+```
+
+**Option 2: Single command (if available)**
+```bash
+npm run dev
+```
+
+### Step 4: Access Your Application
+
+Once both servers are running:
+
+- **Frontend Application**: Open http://localhost:3000 in your browser
+- **Backend API**: Running on http://localhost:5000
+- **API Health Check**: Visit http://localhost:5000/health
+
+### Troubleshooting Local Setup
+
+**Common Issues:**
+
+1. **Port already in use:**
+   ```bash
+   # Kill processes on specific ports
+   lsof -ti:3000 | xargs kill -9
+   lsof -ti:5000 | xargs kill -9
    ```
-   # Terminal 1 - Backend
-   cd backend
-   npm run dev
+
+2. **API Key not working:**
+   - Double-check your ElevenLabs API key
+   - Ensure no extra spaces in the .env file
+   - Restart the backend server after changing .env
+
+3. **Dependencies not installing:**
+   ```bash
+   # Clear npm cache
+   npm cache clean --force
    
-   # Terminal 2 - Frontend
-   cd frontend
-   npm start
+   # Delete node_modules and reinstall
+   rm -rf node_modules package-lock.json
+   npm install
    ```
 
-   **Option 2: Use development script (if available)**
+4. **Permission errors on Mac/Linux:**
+   ```bash
+   sudo npm install -g npm@latest
    ```
-   npm run dev
-   ```
 
-5. **Access the application**
-   - **Frontend**: http://localhost:3000
-   - **Backend API**: http://localhost:5000
-   - **Health Check**: http://localhost:5000/health
+## What Makes This Special?
 
----
+This is a complete voice communication platform that integrates powerful AI services to:
 
-## Usage
+- Convert text to human-like speech using ElevenLabs' cutting-edge AI
+- Make automated phone calls with custom voice messages
+- Provide multiple voice personalities for different use cases
+- Scale effortlessly with professional-grade API integrations
+- Ready for production with proper error handling and security
 
-### Generating Speech
+## Key Features
 
-1. **Enter your text** in the textarea (up to 500 characters)
-2. **Select a voice** from the dropdown menu
-3. **Click "Generate Speech"** and wait for processing
-4. **Listen to the audio** using the built-in player
+<table>
+<tr>
+<td width="50%">
 
-### Making Phone Calls
+### Advanced Text-to-Speech
+- **20+ AI-generated voices** from ElevenLabs
+- **High-fidelity audio** output (MP3, 44.1kHz)
+- **Real-time generation** with streaming support
+- **Voice cloning capabilities** (premium feature)
+- **Emotion and style control**
 
-1. **Generate speech** first (following steps above)
-2. **Enter a phone number** in international format (e.g., +1234567890)
-3. **Click "Make Call"** to initiate the phone call
-4. **Monitor call status** in the interface
+</td>
+<td width="50%">
 
-> **Note**: Phone calls will be simulated if Exotel credentials are not configured. This is perfect for testing and development.
+### Smart Phone Integration  
+- **Automated voice calls** via Exotel API
+- **Call status tracking** and analytics
+- **International number support**
+- **Webhook integrations** for call events
+- **Testing mode** for development
 
-### Tips
+</td>
+</tr>
+<tr>
+<td>
 
-- Use clear, well-punctuated text for better speech quality
-- Test different voices to find the best fit for your content
-- Phone numbers should include country codes
-- Check the console for detailed error messages during development
+### Beautiful User Experience
+- **Responsive design** that works everywhere
+- **Real-time audio waveforms**
+- **Drag-and-drop file uploads**
+- **Dark/light theme support**
+- **Progressive Web App** (PWA) ready
 
----
+</td>
+<td>
 
-## API Reference
+### Enterprise-Ready
+- **Secure API key management**
+- **Rate limiting** and usage tracking
+- **Audio file optimization**
+- **Error recovery mechanisms**
+- **Comprehensive logging**
 
-### Voice Endpoints
+</td>
+</tr>
+</table>
 
-#### Get Available Voices
-```
-GET /api/voice/voices
-```
-**Response:**
-```
-{
-  "success": true,
-  "voices": [
-    {
-      "voice_id": "pNInz6obpgDQGcFmaJgB",
-      "name": "Adam",
-      "category": "generated",
-      "description": "Middle aged American male"
-    }
-  ]
-}
-```
+## Tech Stack
 
-#### Generate Speech
-```
+<div align="center">
+
+### Frontend Powerhouse
+![React](https://img.shields.io/badge/React-18+-61DAFB?style=flat-square&logo=react&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+![CSS3](https://img.shields.io/badge/CSS3-Styling-1572B6?style=flat-square&logo=css3&logoColor=white)
+![Axios](https://img.shields.io/badge/Axios-HTTP-5A29E4?style=flat-square&logo=axios&logoColor=white)
+
+### Backend Excellence  
+![Node.js](https://img.shields.io/badge/Node.js-18+-339933?style=flat-square&logo=node.js&logoColor=white)
+![Express](https://img.shields.io/badge/Express-4+-000000?style=flat-square&logo=express&logoColor=white)
+![ElevenLabs](https://img.shields.io/badge/ElevenLabs-AI%20TTS-FF6B6B?style=flat-square)
+![Exotel](https://img.shields.io/badge/Exotel-Telephony-0066CC?style=flat-square)
+
+</div>
+
+## Usage Guide
+
+### Generate Natural Speech
+
+1. **Enter your text** (supports up to 5,000 characters)
+2. **Choose a voice personality** from our curated collection
+3. **Adjust settings** (speed, pitch, emotion)
+4. **Click "Generate"** and get studio-quality audio
+5. **Preview and download** your speech file
+
+### Make AI Phone Calls
+
+1. **Generate your voice message** first
+2. **Enter phone number** (international format: +1234567890)
+3. **Schedule or call immediately**
+4. **Track call status** in real-time
+5. **Review call analytics** and recordings
+
+### Pro Tips
+
+For better results:
+- Use natural punctuation and pauses
+- Break long texts into shorter segments  
+- Test different voices for your content type
+- Use SSML tags for advanced speech control
+
+## API Documentation
+
+### Voice Generation
+
+```http
 POST /api/voice/generate
-```
-**Request Body:**
-```
+Content-Type: application/json
+
 {
-  "text": "Hello, this is a test message",
-  "voice_id": "pNInz6obpgDQGcFmaJgB"
+  "text": "Hello, this is your AI assistant speaking!",
+  "voice_id": "pNInz6obpgDQGcFmaJgB",
+  "model_id": "eleven_monolingual_v1",
+  "voice_settings": {
+    "stability": 0.75,
+    "similarity_boost": 0.75,
+    "style": 0.5,
+    "use_speaker_boost": true
+  }
 }
 ```
-**Response:**
-```
+
+<details>
+<summary><strong>View Response Format</strong></summary>
+
+```json
 {
   "success": true,
-  "audioUrl": "/audio/speech_1234567890.mp3?t=1234567890",
-  "fileName": "speech_1234567890.mp3",
-  "message": "Speech generated successfully"
+  "data": {
+    "audioUrl": "/api/audio/speech_1699123456789.mp3",
+    "fileName": "speech_1699123456789.mp3",
+    "duration": 3.45,
+    "wordCount": 8,
+    "voiceUsed": "Adam - Natural Male",
+    "generatedAt": "2023-11-04T10:30:45.123Z"
+  },
+  "usage": {
+    "charactersUsed": 43,
+    "charactersRemaining": 9957
+  }
 }
 ```
 
-### Call Endpoints
+</details>
 
-#### Make Phone Call
-```
+### Phone Call Integration
+
+```http
 POST /api/call/make-call
-```
-**Request Body:**
-```
+Content-Type: application/json
+
 {
   "phoneNumber": "+1234567890",
-  "audioUrl": "/audio/speech_1234567890.mp3"
+  "audioUrl": "/api/audio/speech_1699123456789.mp3",
+  "callerId": "VoiceAI",
+  "webhook": "https://your-app.com/webhook/call-status"
 }
 ```
 
-### Utility Endpoints
+### Available Endpoints
 
-#### Health Check
-```
-GET /health
-```
-**Response:**
-```
-{
-  "status": "Server is running!",
-  "timestamp": "2025-09-12T18:30:00.000Z",
-  "envLoaded": true
-}
-```
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/api/voice/voices` | `GET` | List available voices |
+| `/api/voice/generate` | `POST` | Generate speech from text |
+| `/api/voice/stream` | `POST` | Stream speech generation |
+| `/api/call/make-call` | `POST` | Initiate phone call |
+| `/api/call/status/:id` | `GET` | Get call status |
+| `/api/health` | `GET` | Health check |
 
----
-
-## Project Structure
+## Project Architecture
 
 ```
-voice-ai-agent/
-├── README.md                       # Project documentation
-├── LICENSE                         # MIT License
-├── .gitignore                      # Git ignore rules
-├── .env.example                    # Environment template
-├── package.json                    # Root package configuration
-├── backend/                        # Node.js server
-│   ├── .env                        # Environment variables
-│   ├── package.json                # Backend dependencies
-│   ├── server.js                   # Express server setup
-│   ├── routes/                     # API route handlers
-│   │   ├── voice.js                # Text-to-speech routes
-│   │   └── call.js                 # Phone call routes
-│   └── uploads/                    # Generated audio files
-└── frontend/                       # React application
-    ├── package.json                # Frontend dependencies
-    ├── public/                     # Static assets
-    │   ├── index.html              # HTML template
-    │   └── favicon.ico             # App icon
-    └── src/                        # React source code
-        ├── App.js                  # Main application component
-        ├── App.css                 # Application styles
-        ├── index.js                # React entry point
-        └── index.css               # Global styles
+voiceforge/
+├── backend/                      # Node.js + Express API
+│   ├── server.js                 # Application entry point
+│   ├── routes/                   # API route handlers
+│   │   ├── voice.js              # Text-to-speech endpoints
+│   │   ├── call.js               # Phone call endpoints  
+│   │   └── utils.js              # Utility functions
+│   ├── middleware/               # Custom middleware
+│   ├── services/                 # External API integrations
+│   └── uploads/                  # Generated audio files
+├── frontend/                     # React SPA
+│   ├── src/
+│   │   ├── components/           # Reusable UI components
+│   │   ├── pages/                # Application pages
+│   │   ├── hooks/                # Custom React hooks
+│   │   ├── services/             # API client functions
+│   │   └── utils/                # Helper functions
+│   └── public/                   # Static assets
+├── docs/                         # Documentation
+└── tests/                        # Test suites
 ```
-
----
 
 ## Contributing
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+We love contributions! Here's how you can help make this project even better:
 
-### Development Setup
+### Quick Contributing Guide
 
-1. **Fork the Project**
-2. **Create your Feature Branch**
-   ```
-   git checkout -b feature/AmazingFeature
-   ```
-3. **Make your changes**
-4. **Commit your Changes**
-   ```
-   git commit -m 'Add some AmazingFeature'
-   ```
-5. **Push to the Branch**
-   ```
-   git push origin feature/AmazingFeature
-   ```
-6. **Open a Pull Request**
+1. **Fork the repo** and clone your fork
+2. **Create a feature branch**: `git checkout -b feature/amazing-feature`
+3. **Make your changes** and test thoroughly
+4. **Run tests**: `npm run test`
+5. **Commit**: `git commit -m "Add amazing feature"`
+6. **Push**: `git push origin feature/amazing-feature`
+7. **Create a Pull Request**
 
-### Contribution Guidelines
+### Areas We'd Love Help With
 
-- Follow existing code style and conventions
-- Add comments for complex logic
-- Update documentation for new features
-- Test your changes thoroughly
-- Include relevant tests if applicable
+- UI/UX improvements - Make it even more beautiful
+- New voice providers - Integrate more TTS services  
+- Analytics dashboard - Usage insights and metrics
+- Internationalization - Multi-language support
+- Testing - More comprehensive test coverage
+- Documentation - Better examples and tutorials
 
-### Bug Reports
+## Community & Support
 
-If you find a bug, please create an issue with:
-- Clear description of the problem
-- Steps to reproduce
-- Expected vs actual behavior
-- Screenshots if applicable
-- Environment details (OS, Node version, etc.)
+### Need Help?
 
----
+- **Check the Documentation** - Comprehensive guides and tutorials
+- **Report Issues** - Bug reports and feature requests
+- **Join Discussions** - Community Q&A
 
-## License
+## License & Legal
 
-Distributed under the MIT License. See `LICENSE` file for more information.
+This project is licensed under the **MIT License** - see the LICENSE file for details.
 
-```
-MIT License - see the LICENSE file for details
-```
+### Privacy & Security
 
----
-
-## Contact
-
-**Your Name** - [@Rishabh1925](https://twitter.com/Rishabh1925) - email@example.com
-
-**Project Link**: [https://github.com/Rishabh1925/voice-ai-agent](https://github.com/Rishabh1925/voice-ai-agent)
-
-### Connect with me
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/Rishabh1925)
-[![Twitter](https://img.shields.io/badge/Twitter-Follow-1DA1F2?style=for-the-badge&logo=twitter)](https://twitter.com/Rishabh1925)
-[![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github)](https://github.com/Rishabh1925)
-
----
+- We don't store your voice data permanently
+- API keys are encrypted and securely managed
+- All audio files are automatically cleaned up
+- GDPR compliant data handling
 
 ## Acknowledgments
 
 ### Special Thanks
 
-- **[ElevenLabs](https://elevenlabs.io/)** - For providing exceptional AI voice synthesis technology
-- **[Exotel](https://exotel.com/)** - For reliable telephony API services
-- **[React Team](https://reactjs.org/)** - For the amazing frontend framework
-- **[Express.js](https://expressjs.com/)** - For the robust backend framework
-- **[Lucide](https://lucide.dev/)** - For beautiful, consistent icons
+- **ElevenLabs** - Revolutionary AI voice technology
+- **Exotel** - Reliable telephony infrastructure  
+- **React Community** - Amazing frontend framework
+- **Node.js Team** - Powerful backend runtime
 
-### Resources
+### Inspiration & Resources
 
-- [ElevenLabs API Documentation](https://elevenlabs.io/docs)
-- [Exotel API Documentation](https://developer.exotel.com/)
-- [React Documentation](https://reactjs.org/docs)
-- [Express.js Guide](https://expressjs.com/en/guide/routing.html)
-
-### Inspiration
-
-This project was inspired by the need to make voice technology more accessible and to demonstrate the power of combining modern web frameworks with AI-powered APIs.
+- Voice UI Design Patterns
+- Speech Synthesis Markup Language (SSML)
+- Web Audio API Documentation
 
 ---
 
 <div align="center">
 
-**Star this repository if it helped you!**
+**Built by Rishabh Ranjan Singh**
 
-Made with care by [Rishabh Ranjan Singh](https://github.com/Rishabh1925)
+*Making voice technology accessible to everyone*
+
+[![GitHub](https://img.shields.io/badge/GitHub-Rishabh1925-181717?style=flat-square&logo=github)](https://github.com/Rishabh1925)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/rishabh-ranjan-singh)
 
 </div>
-```

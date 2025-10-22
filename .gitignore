@@ -43,3 +43,7 @@ backend/test-key.js
 # Temporary files
 *.tmp
 *.temp
+
+# Vercel - ADD THESE TWO LINES
+.vercel
+.vercel/
