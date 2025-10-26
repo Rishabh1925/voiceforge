@@ -1,6 +1,6 @@
 # VoiceForge
 
-<div align="centre">
+<div align="center">
 
 ![React](https://img.shields.io/badge/React-18+-61DAFB?style=for-the-badge&logo=react&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-18+-339933?style=for-the-badge&logo=node.js&logoColor=white)
